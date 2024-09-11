@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WorkingState : IWorkerState {
@@ -23,6 +21,7 @@ public class WorkingState : IWorkerState {
 
     public void Update() {
         _workTimer += Time.deltaTime;
+
         if ( _workTimer >= _worker.WorkingTime ) {
             _worker.ResetCurrentPlace();
             _worker.SetHomePlace();

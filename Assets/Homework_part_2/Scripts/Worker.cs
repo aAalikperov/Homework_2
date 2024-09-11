@@ -1,6 +1,4 @@
-using HomeWorkPart2;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -25,8 +23,9 @@ public class Worker : MonoBehaviour {
     public float WorkingTime => _workingTime;
     public float RestTime => _restTime;
     
-    private void Awake() {
+    private void Start() {
         _move = GetComponent<Move>();
+        SetMachinePlace();
         _stateMachine = new WorkerStateMachine( this );
     }
 

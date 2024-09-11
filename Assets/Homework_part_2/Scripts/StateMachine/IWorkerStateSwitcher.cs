@@ -1,4 +1,3 @@
-public interface IWorkerStateSwitcher 
-{
-   void SetState<T>() where T : IWorkerState;
+public interface IWorkerStateSwitcher {
+    void SetState<T>() where T : IWorkerState;
 }

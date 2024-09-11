@@ -21,6 +21,7 @@ public class RestState : IWorkerState {
 
     public void Update() {
         _restingTimer += Time.deltaTime;
+
         if ( _restingTimer >= _worker.RestTime ) {
             _worker.ResetCurrentPlace();
             _worker.SetMachinePlace();
